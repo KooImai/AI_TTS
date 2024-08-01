@@ -16,3 +16,8 @@
 !/initialize.py
 !/requirements.txt
 !/server_editor.py
+#下記は一時的に含めている　app.py用
+!/app.py
+!/gradio_tabs
+!/default_style.py
+!/bert/bert_models.json

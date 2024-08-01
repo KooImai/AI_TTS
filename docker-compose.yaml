@@ -1,0 +1,11 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile.deploy
+    container_name: style-bert-vits2
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+      - "5000:5000"

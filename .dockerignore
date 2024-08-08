@@ -21,3 +21,4 @@
 !/gradio_tabs
 !/default_style.py
 !/bert/bert_models.json
+!/server_editor_vertex.py

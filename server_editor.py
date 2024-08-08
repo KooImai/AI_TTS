@@ -274,6 +274,7 @@ class SynthesisRequest(BaseModel):
 
 @router.post("/synthesis", response_class=AudioResponse)
 def synthesis(request: SynthesisRequest):
+    print(request)
     if args.line_length is not None and len(request.text) > args.line_length:
         raise HTTPException(
             status_code=400,
@@ -332,6 +333,7 @@ class MultiSynthesisRequest(BaseModel):
 
 @router.post("/multi_synthesis", response_class=AudioResponse)
 def multi_synthesis(request: MultiSynthesisRequest):
+    print(request)
     lines = request.lines
     if args.line_count is not None and len(lines) > args.line_count:
         raise HTTPException(

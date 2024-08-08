@@ -2,8 +2,9 @@ services:
   app:
     build: 
       context: .
-      dockerfile: ./Dockerfile.deploy
-    container_name: style-bert-vits2
+      dockerfile: ./Dockerfile.vertexAI
+    container_name: style-bert-vits2-vertexAI
+    tty: true
     volumes:
       - ./:/app
     ports:

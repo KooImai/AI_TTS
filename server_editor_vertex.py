@@ -53,7 +53,8 @@ from style_bert_vits2.nlp.japanese.user_dict import (
     update_dict,
 )
 from style_bert_vits2.tts_model import TTSModelHolder, TTSModelInfo
-import os
+
+
 
 AIP_HEALTH_ROUTE = os.environ.get('AIP_HEALTH_ROUTE', '/health')
 AIP_PREDICT_ROUTE = os.environ.get('AIP_PREDICT_ROUTE', '/predict')
@@ -218,12 +219,6 @@ async def predict(instances: SynthesisRequest):
     response = synthesis(instances)
     return response
 
-app.include_router(router, prefix="/api")
 
 if __name__ == "__main__":
-    if not skip_static_files:
-        download_static_files("litagin02", "Style-Bert-VITS2-Editor", "out.zip")
-    app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
-    if args.inbrowser:
-        webbrowser.open(f"http://localhost:{port}")
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=8080)

@@ -22,3 +22,6 @@
 !/default_style.py
 !/bert/bert_models.json
 !/server_editor_vertex.py
+!/server_test.py
+!/requirements-server_test.txt
+!/requirements-vertex.txt

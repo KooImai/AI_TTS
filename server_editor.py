@@ -447,5 +447,5 @@ if __name__ == "__main__":
         download_static_files("litagin02", "Style-Bert-VITS2-Editor", "out.zip")
     app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
     if args.inbrowser:
-        webbrowser.open(f"http://localhost:{port}")
-    uvicorn.run(app, host="0.0.0.0", port=port)
+        webbrowser.open(f"http://localhost:8080")
+    uvicorn.run(app, host="0.0.0.0", port=8080)
